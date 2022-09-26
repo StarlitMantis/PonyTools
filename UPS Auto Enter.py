@@ -23,7 +23,7 @@ while True:
         continue
     continue
     
-
+'''
 pyautogui.click(69, 740) #opens search
 time.sleep(1)
 pyautogui.write('chrome') #types chrome into search
@@ -38,8 +38,22 @@ pyautogui.keyUp('up')
 time.sleep(.2)
 pyautogui.write('https://ap.ups.com/REAP/AccessPoint.htm') #goes to website
 pyautogui.press('enter')
+'''
 
-pyautogui.click(684,399, duration=1.5) #logs in
+webbrowser.open('https://ap.ups.com/REAP/AccessPoint.htm')
+
+#pyautogui.click(684,399, duration=1.5) #logs in
+
+#maximizes the window
+
+time.sleep(.5)
+pyautogui.keyDown('winleft') 
+pyautogui.keyDown('up')
+time.sleep(.2)
+pyautogui.keyUp('winleft')
+pyautogui.keyUp('up')
+time.sleep(1.5)
+
 pyautogui.click(351,554, duration=3) #opens tracking num screen
 time.sleep(1)
 for i in range(len(trackingNumList)-1):
